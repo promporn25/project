@@ -1,0 +1,22 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+html, body, #root { height: 100%; }  /* สำคัญ เพื่อให้จัดกลางได้ */
+body {
+  margin: 0; padding: 0;
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  display: flex; justify-content: center; align-items: center;
+  color: #2c3e50;
+}
+.landing-container {
+  background: #ffffffdd; padding: 3rem 2.5rem; border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15); width: 100%; max-width: 420px; text-align: center;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: box-shadow .3s ease;
+}
+.landing-container:hover { box-shadow: 0 24px 48px rgba(0,0,0,0.2); }
+.landing-container h1 { font-weight: 700; font-size: 2.4rem; margin-bottom: 2.5rem; letter-spacing: 1.2px; color: #34495e; }
+.landing-btn {
+  display: block; width: 100%; padding: 1.15rem; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600;
+  border: none; border-radius: 12px; text-align: center; text-decoration: none; color: #fff;
+  background: linear-gradient(45deg, #4a90e2, #357ab8);
+  box-shadow: 0 6px 15px rgba(74,144,226,.4); transition: all .3s ease;
+}
+.landing-btn:hover { background: linear-gradient(45deg, #357ab8, #2a5d8f); transform: translateY(-2px); }
