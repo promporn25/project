@@ -10,8 +10,12 @@ export default function Login() {
   const onSubmit = (e) => {
     e.preventDefault();
     const res = login(email, password);
-    if (res.ok) { alert("เข้าสู่ระบบสำเร็จ!"); nav("/home"); }
-    else alert(res.msg);
+    if (res.ok) {
+      alert("เข้าสู่ระบบสำเร็จ!");
+      nav("/Frist");   // ✅ เปลี่ยนให้ไปหน้า First
+    } else {
+      alert(res.msg);
+    }
   };
 
   return (
@@ -19,14 +23,32 @@ export default function Login() {
       <h1>เข้าสู่ระบบ</h1>
       <form onSubmit={onSubmit}>
         <label>อีเมล</label>
-        <input type="email" value={email} onChange={e=>setEmail(e.target.value)} required />
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
         <label>รหัสผ่าน</label>
-        <input type="password" value={password} onChange={e=>setPassword(e.target.value)} required />
+        <input
+          type="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Sign In</button>
-        <button type="button" className="secondary" onClick={()=>nav("/resetpassword")}>Forgot Password</button>
+        <button
+          type="button"
+          className="secondary"
+          onClick={() => nav("/resetpassword")}
+        >
+          Forgot Password
+        </button>
       </form>
 
-      <p style={{marginTop:12}}>ยังไม่มีบัญชี? <Link to="/register">สมัครสมาชิก</Link></p>
+      <p style={{ marginTop: 12 }}>
+        ยังไม่มีบัญชี? <Link to="/register">สมัครสมาชิก</Link>
+      </p>
     </div>
   );
 }
