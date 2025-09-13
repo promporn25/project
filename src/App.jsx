@@ -6,7 +6,7 @@ import EditProfile from "./pages/EditProfile.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
-import Frist from "./pages/Frist.jsx";   // ✅ เพิ่มหน้า First
+import Frist from "./pages/Frist.jsx";  
 import { isLoggedIn } from "./lib/auth.js";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <Routes>
-      {/* เปิดเว็บครั้งแรก → ไปที่ home */}
+      
       <Route path="/" element={<Navigate to="/home" replace />} />
 
       <Route
@@ -52,7 +52,7 @@ export default function App() {
         }
       />
 
-      {/* ✅ หน้า First หลัง login */}
+      {/* zหน้า First หลัง login */}
       <Route
         path="/Frist"
         element={
@@ -62,12 +62,12 @@ export default function App() {
         }
       />
 
-      {/* public routes */}
+    
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/resetpassword" element={<ResetPassword />} />
 
-      {/* ไม่เจอ path → ไป home */}
+      
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   );
