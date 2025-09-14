@@ -12,8 +12,7 @@ export default function Login() {
     const res = login(email, password);
     if (res.ok) {
       alert("เข้าสู่ระบบสำเร็จ!");
-      nav("/Frist");   // ✅ เปลี่ยนให้ไปหน้า First
-    } else {
+      nav("/Frist"); 
       alert(res.msg);
     }
   };

@@ -24,16 +24,25 @@ body {
   font-size: 20px; text-decoration: none; color: black; cursor: pointer;
 }
 
-/* Home - blue box + cards */
+/* หน้าfrist */
 .blue-box {
-  background: #0d3b82; margin: 40px auto; border-radius: 25px; width: 90%;
-  padding: 40px 20px; display: flex; justify-content: center; gap: 40px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2); align-items: stretch;
+  background: #0d3b82;
+  margin: 45px auto;
+  border-radius: 25px;
+  width: 90%;
+  padding: 40px 20px;           
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  align-items: stretch;
+  flex-wrap: wrap;           
 }
+ 
 .card-container { display: flex; flex-direction: column; align-items: center; flex: 1; }
 .card {
-  background: #fff; border-radius: 20px; padding: 30px 20px; width: 260px; text-align: center;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; justify-content: space-between;
+  background: #fff; border-radius: 10px; padding: 60px 30px; width: 450px; text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: space-between;
   flex: 1; transition: transform .3s, box-shadow .3s; opacity: 0; animation: fadeSlideUp .8s ease forwards;
 }
 .card:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(0,0,0,0.3); }
@@ -47,13 +56,14 @@ body {
 .label { text-align: center; margin-top: 12px; font-weight: bold; color: #fff; font-size: 14px; }
 @keyframes fadeSlideUp { from {opacity:0; transform: translateY(50px);} to {opacity:1; transform: translateY(0);} }
 
+
 /* Section titles */
 .h1-center {
   font-size: 28px; font-weight: 700; margin: 30px auto; text-align: center; color: #a67873;
   text-shadow: 1px 1px 3px #f0dede; max-width: 900px;
 }
 
-/* CheckSubject styles (พาสเทล) */
+/* CheckSubject styles */
 .wrap-narrow { margin: 20px auto; max-width: 900px; padding: 0 20px 40px; }
 details {
   margin-bottom: 25px; border: 1px solid #7d5048; border-radius: 12px; background-color: #fff0f3;

@@ -6,7 +6,7 @@ import EditProfile from "./pages/EditProfile.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
-import Frist from "./pages/Frist.jsx";  
+import First from "./pages/Frist.jsx";  
 import { isLoggedIn } from "./lib/auth.js";
 
 export default function App() {
@@ -19,6 +19,7 @@ export default function App() {
       
       <Route path="/" element={<Navigate to="/home" replace />} />
 
+     
       <Route
         path="/home"
         element={
@@ -51,24 +52,22 @@ export default function App() {
           </PrivateRoute>
         }
       />
-
-      {/* zหน้า First หลัง login */}
       <Route
-        path="/Frist"
+        path="/frist"
         element={
           <PrivateRoute>
-            <Frist />
+            <First />
           </PrivateRoute>
         }
       />
 
-    
+      
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/resetpassword" element={<ResetPassword />} />
 
       
-      <Route path="*" element={<Navigate to="/home" replace />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
