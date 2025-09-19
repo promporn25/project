@@ -24,37 +24,181 @@ body {
   font-size: 20px; text-decoration: none; color: black; cursor: pointer;
 }
 
+/*////////////////////////////////////////////////////////////////////////
 /* หน้าfrist */
+/* กล่องใหญ่ */
 .blue-box {
-  background: #0d3b82;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
   margin: 45px auto;
   border-radius: 25px;
-  width: 90%;
-  padding: 40px 20px;           
+  width: 95%;
+  padding: 60px 30px;
   display: flex;
   justify-content: center;
   gap: 40px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   align-items: stretch;
-  flex-wrap: wrap;           
+  flex-wrap: wrap;
 }
- 
-.card-container { display: flex; flex-direction: column; align-items: center; flex: 1; }
+
+/* container ของการ์ด */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 420px; 
+}
+
+/* การ์ด */
 .card {
-  background: #fff; border-radius: 10px; padding: 60px 30px; width: 450px; text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: space-between;
-  flex: 1; transition: transform .3s, box-shadow .3s; opacity: 0; animation: fadeSlideUp .8s ease forwards;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  background: #fff;
+  transition: transform .3s, box-shadow .3s;
+  opacity: 0;
+  animation: fadeSlideUp .8s ease forwards;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
-.card:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(0,0,0,0.3); }
-.card img { width: 100px; margin: 0 auto 20px; }
-.card p { font-size: 14px; color: #333; margin-bottom: 25px; flex-grow: 1; }
+
+/* การ์ดซ้าย */
+.card-container:first-child .card {
+  background: linear-gradient(135deg, #638dc9, #4a74b8);
+  color: #fff;
+}
+
+/* การ์ดขวา */
+.card-container:last-child .card {
+  background: #ffffff; 
+  color: #333;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* รูป */
+.card img {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* หัวข้อ */
+.card h2, 
+.card h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+  color: inherit;
+  text-align: center;
+}
+
+/* เนื้อหา */
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  color: inherit;
+  text-align: center;
+}
+
+/* ปุ่ม */
 .card button {
-  background: #eee; border: none; padding: 10px 20px; border-radius: 12px; font-weight: bold; color: red;
-  cursor: pointer; transition: background .3s;
+  display: inline-block;
+  margin: 15px auto 0;
+  background: #f44336;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background .3s, transform .2s;
+  box-shadow: 0 4px 10px rgba(244,67,54,0.3);
 }
-.card button:hover { background: #ddd; }
-.label { text-align: center; margin-top: 12px; font-weight: bold; color: #fff; font-size: 14px; }
-@keyframes fadeSlideUp { from {opacity:0; transform: translateY(50px);} to {opacity:1; transform: translateY(0);} }
+
+.card button:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* ป้ายข้อความใต้การ์ด */
+.label {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity:0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+/* Topbar */
+.topbar {
+  background: #111;                  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: 95%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* โลโก้ GRADIE KU */
+.topbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4d90fe;
+  cursor: pointer;
+  text-shadow: 2px 2px #000;           
+}
+
+.topbar .logo .ku {
+  color: #fff;                       
+}
+
+/* โปรไฟล์ขวา */
+.topbar .profile {
+  cursor: pointer;
+}
+
+.topbar .profile-icon {
+  font-size: 28px;
+  color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  display: inline-block;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 /* Section titles */
