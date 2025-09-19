@@ -35,7 +35,7 @@ body {
   padding: 60px 30px;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 150 px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   align-items: stretch;
   flex-wrap: wrap;
